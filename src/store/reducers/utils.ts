@@ -1,4 +1,5 @@
 import { Fx } from '../../typings/api';
+import { removeWhiteSpaces } from '../../utils';
 import { CurrencyState, GetCurrenciesSuccessAction } from '../store.types';
 
 const validateString = (text?: string): boolean => {
@@ -6,7 +7,7 @@ const validateString = (text?: string): boolean => {
     return false;
   }
 
-  const textTrimmed = text.replace(/\s/g, '');
+  const textTrimmed = removeWhiteSpaces(text);
   return !!textTrimmed.length;
 };
 

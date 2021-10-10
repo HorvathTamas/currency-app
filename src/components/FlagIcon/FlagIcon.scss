@@ -1,0 +1,19 @@
+@import '../../styles/main.scss';
+
+.flag-icon {
+  height: 30px;
+  width: 50px;
+
+  &--placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: $color-grey;
+    border-radius: 5px;
+    border: 2px dashed $color-grey;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+  }
+}
