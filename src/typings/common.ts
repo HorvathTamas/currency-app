@@ -1,3 +1,3 @@
 export enum SearchParams {
-  FILTER = 'filter',
+  Filter = 'filter',
 }
