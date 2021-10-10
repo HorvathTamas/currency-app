@@ -1,0 +1,28 @@
+@import '../../../styles/main.scss';
+
+.text-input {
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 500px;
+
+  &__field {
+    padding-left: 10px;
+    flex: 1;
+  }
+
+  &__icon-container {
+    padding: 10px;
+  }
+
+  &__divider {
+    height: 28px;
+    padding: 4px;
+  }
+
+  &__icon {
+    color: $color-black;
+    opacity: 0.5;
+  }
+}

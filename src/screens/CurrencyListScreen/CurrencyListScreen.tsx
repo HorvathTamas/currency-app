@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, ChangeEvent } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import useQuery from '../../hooks/useQuery';
@@ -8,7 +8,7 @@ import { SearchParams } from '../../typings/common';
 import { debounce } from 'lodash';
 import { RootState } from '../../store';
 import { makeSelectCurrenciesBySearch } from '../../store/selectors/currency.selectors';
-import { Fx } from '../../typings/api';
+import TextInput from '../../components/input/TextInput/TextInput';
 
 const CurrencyListScreen = () => {
   const dispatch = useDispatch();
@@ -36,7 +36,7 @@ const CurrencyListScreen = () => {
     []
   );
 
-  const handleSearchChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearchChanged = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchParam(event.target.value);
     search(event.target.value);
   };
@@ -49,7 +49,7 @@ const CurrencyListScreen = () => {
     if (currencyData) {
       return (
         <div>
-          {(currencyData as Fx[]).map((item) => (
+          {currencyData.map((item) => (
             <div key={item.currency}>{item.currency}</div>
           ))}
         </div>
@@ -59,8 +59,9 @@ const CurrencyListScreen = () => {
 
   return (
     <div className="currencies-page">
-      <div>{queryParam || 'CurrencyListScreen'}</div>
-      <input disabled={loading} type="text" value={searchParam} onChange={handleSearchChanged} />
+      <div className="currencies-page__search-bar-container">
+        <TextInput disabled={loading} value={searchParam} onChangeHandler={handleSearchChanged} />
+      </div>
       {renderContent()}
     </div>
   );
