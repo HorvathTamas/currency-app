@@ -1,5 +1,6 @@
 import * as actions from '../actions';
 import { CurrencyState, CurrencyActionTypes } from '../store.types';
+import { setCurrencies } from './utils';
 
 const initialState: CurrencyState = {
   data: null,
@@ -12,7 +13,7 @@ const currencyReducer = (state = initialState, action: CurrencyActionTypes): Cur
     case actions.GET_CURRENCIES_STARTED:
       return { ...state, loading: true, error: null };
     case actions.GET_CURRENCIES_SUCCESS:
-      return { ...state, data: action.data, loading: false };
+      return setCurrencies(state, action);
     case actions.GET_CURRENCIES_FAILED:
       return { ...state, loading: false, error: action.error };
     default:

@@ -7,13 +7,14 @@ import './TextInput.scss';
 
 interface TextInputProps {
   value: string;
-  disabled: boolean;
+  disabled?: boolean;
+  withIcon?: boolean;
   onChangeHandler: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const TextInput: FunctionComponent<TextInputProps> = ({ value, disabled, onChangeHandler }) => {
+const TextInput: FunctionComponent<TextInputProps> = ({ value, disabled, withIcon, onChangeHandler }) => {
   return (
-    <Paper component="form" className="text-input">
+    <Paper className="text-input">
       <InputBase
         className="text-input__field"
         disabled={disabled}
@@ -21,13 +22,17 @@ const TextInput: FunctionComponent<TextInputProps> = ({ value, disabled, onChang
         onChange={onChangeHandler}
         placeholder="Search Currencies"
       />
-      <div className="text-input__divider">
-        <Divider orientation="vertical" />
-      </div>
+      {withIcon && (
+        <>
+          <div className="text-input__divider">
+            <Divider orientation="vertical" />
+          </div>
 
-      <div className="text-input__icon-container" aria-label="search">
-        <SearchIcon className="text-input__icon" />
-      </div>
+          <div className="text-input__icon-container" aria-label="search">
+            <SearchIcon className="text-input__icon" />
+          </div>
+        </>
+      )}
     </Paper>
   );
 };

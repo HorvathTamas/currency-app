@@ -1,0 +1,15 @@
+.currency-item {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 5px 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+
+  &__flag {
+      height: 30px;
+      width: 50px;
+  }
+}
