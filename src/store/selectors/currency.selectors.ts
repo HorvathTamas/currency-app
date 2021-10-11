@@ -18,6 +18,7 @@ const makeSelectBaseCurrency = () =>
 const makeSelectCurrenciesBySearch = (searchParam: string | null) =>
   createSelector(makeSelectCurrencies(), (res) => {
     const options = {
+      threshold: 0.3,
       keys: ['currency', 'nameI18N', 'exchangeRate.buy', 'exchangeRate.middle', 'exchangeRate.sell'],
     };
 

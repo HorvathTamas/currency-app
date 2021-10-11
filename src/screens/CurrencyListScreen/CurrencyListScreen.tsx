@@ -10,6 +10,8 @@ import { RootState } from '../../store';
 import { makeSelectBaseCurrency, makeSelectCurrenciesBySearch } from '../../store/selectors/currency.selectors';
 import TextInput from '../../components/input/TextInput/TextInput';
 import CurrencyList from '../../components/CurrencyList/CurrencyList';
+import Spinner from '../../components/Spinner/Spinner';
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 
 const CurrencyListScreen = () => {
   const dispatch = useDispatch();
@@ -17,7 +19,7 @@ const CurrencyListScreen = () => {
   const queryParam = useQuery(SearchParams.Filter);
 
   const [searchParam, setSearchParam] = useState('');
-  const { loading } = useSelector((state: RootState) => state.currency);
+  const { loading, error } = useSelector((state: RootState) => state.currency);
   const currencyData = useSelector(makeSelectCurrenciesBySearch(queryParam));
   const baseCurrency = useSelector(makeSelectBaseCurrency());
 
@@ -45,7 +47,11 @@ const CurrencyListScreen = () => {
 
   const renderContent = () => {
     if (loading) {
-      return <div>Loading...</div>;
+      return <Spinner />;
+    }
+
+    if (error) {
+      return <ErrorMessage />;
     }
 
     if (currencyData && baseCurrency) {
@@ -56,7 +62,7 @@ const CurrencyListScreen = () => {
   return (
     <div className="currencies-page">
       <div className="currencies-page__search-bar-container">
-        <TextInput withIcon disabled={loading} value={searchParam} onChangeHandler={handleSearchChanged} />
+        <TextInput withIcon disabled={loading || !!error} value={searchParam} onChangeHandler={handleSearchChanged} />
       </div>
       {renderContent()}
     </div>
