@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   width: 80%;
-  max-width: 500px;
+  max-width: $input-max-width;
 
   &__field {
     padding-left: 10px;
