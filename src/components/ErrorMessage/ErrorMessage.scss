@@ -1,0 +1,25 @@
+@import '../../styles/main.scss';
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding-top: 50px;
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 200px;
+    font-size: 20px;
+    font-weight: bold;
+    max-width: $list-items-max-width;
+
+    background-color: transparent;
+    color: $color-deep-taube;
+    border-radius: 5px;
+    border: 2px solid $color-deep-taube;
+  }
+}

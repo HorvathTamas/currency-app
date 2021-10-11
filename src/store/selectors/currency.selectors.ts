@@ -6,9 +6,19 @@ const selectCurrencies = (state: RootState) => state.currency;
 
 const makeSelectCurrencies = () => createSelector(selectCurrencies, (substate) => substate.data);
 
+const makeSelectBaseCurrency = () =>
+  createSelector(makeSelectCurrencies(), (res) => {
+    if (!res) {
+      return null;
+    }
+
+    return res.baseCurrency;
+  });
+
 const makeSelectCurrenciesBySearch = (searchParam: string | null) =>
   createSelector(makeSelectCurrencies(), (res) => {
     const options = {
+      threshold: 0.3,
       keys: ['currency', 'nameI18N', 'exchangeRate.buy', 'exchangeRate.middle', 'exchangeRate.sell'],
     };
 
@@ -24,4 +34,4 @@ const makeSelectCurrenciesBySearch = (searchParam: string | null) =>
     return res.fx;
   });
 
-export { makeSelectCurrenciesBySearch };
+export { makeSelectBaseCurrency, makeSelectCurrenciesBySearch };

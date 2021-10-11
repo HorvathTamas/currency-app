@@ -1,0 +1,37 @@
+@import '../../styles/main.scss';
+
+.flag-icon {
+  &--placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: $color-grey;
+    border-radius: 5px;
+    border: 2px dashed $color-grey;
+    font-style: normal;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: $breakpoint-monitor) {
+  .flag-icon {
+    height: 30px;
+    width: 50px;
+
+    &--placeholder {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .flag-icon {
+    height: 60px;
+    width: 100px;
+
+    &--placeholder {
+      font-size: 16px;
+    }
+  }
+}

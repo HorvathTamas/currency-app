@@ -1,0 +1,50 @@
+@import '../../../styles/main.scss';
+
+.currency-item {
+  display: flex;
+  width: 100%;
+  margin: 5px 0;
+  align-items: center;
+  padding: 0 10px;
+
+  &__name {
+    font-weight: bold;
+  }
+}
+
+@media (min-width: $breakpoint-monitor) {
+  .currency-item {
+    height: 60px;
+    max-width: $list-items-max-width;
+    justify-content: space-between;
+
+    &__flag-container {
+      flex: 1;
+    }
+
+    &__name {
+      flex: 2;
+    }
+
+    &__rates {
+      flex: 4;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .currency-item {
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-around;
+
+    &__rates {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
