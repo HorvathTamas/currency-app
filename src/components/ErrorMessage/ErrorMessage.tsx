@@ -8,7 +8,9 @@ interface ErrorMessageProps {
 const ErrorMessage: FunctionComponent<ErrorMessageProps> = ({ message }) => {
   return (
     <div className="error-message">
-      <div className="error-message__box">{message || 'Something went wrong :('}</div>
+      <div data-testid="errorMessage" className="error-message__box">
+        {message || 'Something went wrong :('}
+      </div>
     </div>
   );
 };
