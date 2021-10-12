@@ -13,8 +13,8 @@ const CurrencyList: FunctionComponent<CurrencyListProps> = ({ currencies, baseCu
   return (
     <div className="currency-list">
       <Paper elevation={6} className="currency-list__title-container">
-        <div className="currency-list__title">{`Result(s): ${currencies.length}`}</div>
-        <div className="currency-list__title">{`Base Currency: 1 ${baseCurrency}`}</div>
+        <div data-testid="resultNumber" className="currency-list__title">{`Result(s): ${currencies.length}`}</div>
+        <div data-testid="baseCurrency" className="currency-list__title">{`Base Currency: 1 ${baseCurrency}`}</div>
       </Paper>
       {currencies.map((item) => (
         <CurrencyItem key={item.currency} currencyItem={item} />

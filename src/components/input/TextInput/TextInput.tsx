@@ -28,7 +28,7 @@ const TextInput: FunctionComponent<TextInputProps> = ({ value, disabled, withIco
             <Divider orientation="vertical" />
           </div>
 
-          <div className="text-input__icon-container" aria-label="search">
+          <div data-testid="searchIcon" className="text-input__icon-container" aria-label="search">
             <SearchIcon className="text-input__icon" />
           </div>
         </>

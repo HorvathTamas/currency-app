@@ -1,0 +1,242 @@
+{
+  "institute": 198,
+  "lastUpdated": "2018-11-09T15:07:00Z",
+  "comparisonDate": "2018-11-09T12:45:00Z",
+  "baseCurrency": "EUR",
+  "fx": [
+    {
+      "currency": "FJD",
+      "precision": 2,
+      "nameI18N": "Fiji Dollar",
+      "exchangeRate": {
+        "buy": 2.0,
+        "middle": 2.25,
+        "sell": 2.5,
+        "indicator": 0,
+        "lastModified": "2012-02-14T23:00:00Z"
+      },
+      "banknoteRate": {
+        "buy": 2.2,
+        "middle": 2.4,
+        "sell": 2.6,
+        "indicator": 0,
+        "lastModified": "2018-11-06T23:00:00Z"
+      },
+      "flags": ["provided"]
+    },
+    {
+      "currency": "MXN",
+      "precision": 2,
+      "nameI18N": "Mexican Peso",
+      "exchangeRate": {
+        "buy": 22.38,
+        "middle": 22.98,
+        "sell": 23.58,
+        "indicator": 0,
+        "lastModified": "2018-11-08T23:00:00Z"
+      },
+      "banknoteRate": {
+        "buy": 21.1,
+        "middle": 22.6,
+        "sell": 24.1,
+        "indicator": 0,
+        "lastModified": "2018-11-06T23:00:00Z"
+      },
+      "flags": ["provided"]
+    },
+    {
+      "currency": "SCR",
+      "precision": 2,
+      "nameI18N": "Seychelles-Rupee",
+      "exchangeRate": {
+        "buy": 14.7246,
+        "middle": 15.4746,
+        "sell": 16.2246,
+        "indicator": 0,
+        "lastModified": "2018-11-08T23:00:00Z"
+      },
+      "banknoteRate": {
+        "buy": 14.167,
+        "middle": 15.667,
+        "sell": 17.167,
+        "indicator": 0,
+        "lastModified": "2018-11-06T23:00:00Z"
+      },
+      "flags": ["provided"]
+    },
+    {
+      "currency": "BBD",
+      "precision": 2,
+      "nameI18N": "Barbados Dollar",
+      "exchangeRate": {
+        "buy": 2.1376,
+        "middle": 2.2626,
+        "sell": 2.3876,
+        "indicator": 0,
+        "lastModified": "2018-11-08T23:00:00Z"
+      },
+      "banknoteRate": {
+        "buy": 1.948,
+        "middle": 2.288,
+        "sell": 2.628,
+        "indicator": 0,
+        "lastModified": "2018-11-06T23:00:00Z"
+      },
+      "flags": ["provided"]
+    },
+    {
+      "currency": "CLP",
+      "precision": 0,
+      "nameI18N": "Chilian Peso",
+      "exchangeRate": {
+        "buy": 635.5166,
+        "middle": 663.0166,
+        "sell": 690.5166,
+        "indicator": 0,
+        "lastModified": "2011-07-24T22:00:00Z"
+      },
+      "flags": ["provided"]
+    },
+    {
+      "currency": "UGX",
+      "precision": 0,
+      "nameI18N": "Uganda Shilling",
+      "exchangeRate": {
+        "buy": 4052.106,
+        "middle": 4252.106,
+        "sell": 4452.106,
+        "indicator": 0,
+        "lastModified": "2018-11-08T23:00:00Z"
+      },
+      "flags": ["provided"]
+    },
+    {
+      "currency": "ZAR",
+      "precision": 2,
+      "nameI18N": "South African Rand",
+      "denominations": [200, 100, 50, 20, 10],
+      "exchangeRate": {
+        "buy": 16.035,
+        "middle": 16.19,
+        "sell": 16.345,
+        "indicator": 0,
+        "lastModified": "2018-11-08T23:00:00Z"
+      },
+      "banknoteRate": {
+        "buy": 14.9385,
+        "middle": 16.014,
+        "sell": 17.0895,
+        "indicator": 0,
+        "lastModified": "2018-11-06T23:00:00Z"
+      },
+      "flags": ["provided"]
+    },
+    {
+      "currency": "TND",
+      "precision": 3,
+      "nameI18N": "Tunisian Dinar",
+      "exchangeRate": {
+        "buy": 3.2631,
+        "middle": 3.2931,
+        "sell": 3.3231,
+        "indicator": 0,
+        "lastModified": "2018-11-08T23:00:00Z"
+      },
+      "banknoteRate": {
+        "buy": 3.10075,
+        "middle": 3.302,
+        "sell": 3.50325,
+        "indicator": 0,
+        "lastModified": "2018-11-06T23:00:00Z"
+      },
+      "flags": ["provided"]
+    },
+    {
+      "currency": "BSD",
+      "precision": 2,
+      "nameI18N": "Bahamanian-Dollar",
+      "exchangeRate": {
+        "buy": 1.0695,
+        "middle": 1.1345,
+        "sell": 1.1995,
+        "indicator": 0,
+        "lastModified": "2018-11-08T23:00:00Z"
+      },
+      "banknoteRate": {
+        "buy": 0.989,
+        "middle": 1.149,
+        "sell": 1.309,
+        "indicator": 0,
+        "lastModified": "2018-11-06T23:00:00Z"
+      },
+      "flags": ["provided"]
+    },
+    {
+      "currency": "SLL",
+      "precision": 2,
+      "nameI18N": "Sierra Leone Leone",
+      "exchangeRate": {
+        "buy": 9633.3375,
+        "middle": 9728.3375,
+        "sell": 9823.3375,
+        "indicator": 0,
+        "lastModified": "2018-11-08T23:00:00Z"
+      },
+      "flags": ["provided"]
+    },
+    {
+      "currency": "IQD",
+      "precision": 3,
+      "nameI18N": "Iraqi Dinar",
+      "exchangeRate": {
+        "buy": 1303.7024,
+        "middle": 1353.7024,
+        "sell": 1403.7024,
+        "indicator": 0,
+        "lastModified": "2018-11-08T23:00:00Z"
+      },
+      "flags": ["provided"]
+    },
+    {
+      "currency": "TWD",
+      "precision": 2,
+      "nameI18N": "Taiwan Dollar",
+      "exchangeRate": {
+        "buy": 33.025,
+        "middle": 34.9,
+        "sell": 36.775,
+        "indicator": 0,
+        "lastModified": "2018-11-08T23:00:00Z"
+      },
+      "banknoteRate": {
+        "buy": 29.2,
+        "middle": 35.2,
+        "sell": 41.2,
+        "indicator": 0,
+        "lastModified": "2018-11-06T23:00:00Z"
+      },
+      "flags": ["provided"]
+    },
+    {
+      "currency": "RSD",
+      "precision": 2,
+      "nameI18N": "Serbian dinar",
+      "denominations": [5000, 1000, 500, 200, 100, 50, 20, 10],
+      "exchangeRate": {
+        "buy": 116.3,
+        "middle": 118.3,
+        "sell": 120.3,
+        "indicator": 0,
+        "lastModified": "2018-11-08T23:00:00Z"
+      },
+      "banknoteRate": {
+        "buy": 113.4,
+        "middle": 118.3,
+        "sell": 123.2,
+        "indicator": 0,
+        "lastModified": "2018-11-06T23:00:00Z"
+      },
+      "flags": ["provided"]
+    }
+  ]
+}

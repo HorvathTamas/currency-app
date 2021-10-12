@@ -18,10 +18,14 @@ const FlagIcon: FunctionComponent<FlagIconProps> = ({ currency }) => {
   };
 
   if (tryRequire()) {
-    return <img className="flag-icon" src={tryRequire().default} alt="flag" />;
+    return <img data-testid="flag" className="flag-icon" src={tryRequire().default} alt="flag" />;
   }
 
-  return <div className="flag-icon flag-icon--placeholder">No Flag</div>;
+  return (
+    <div data-testid="placeholder" className="flag-icon flag-icon--placeholder">
+      No Flag
+    </div>
+  );
 };
 
 export default FlagIcon;

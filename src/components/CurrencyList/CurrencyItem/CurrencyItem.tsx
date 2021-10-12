@@ -12,15 +12,17 @@ interface CurrencyItemProps {
 const CurrencyItem: FunctionComponent<CurrencyItemProps> = ({ currencyItem }) => {
   const { currency, exchangeRate, nameI18N } = currencyItem;
   return (
-    <Paper elevation={6} className="currency-item">
-      <div className="currency-item__flag-container">
+    <Paper data-testid="currencyItem" elevation={6} className="currency-item">
+      <div data-testid="flagContainer" className="currency-item__flag-container">
         <FlagIcon currency={currency} />
       </div>
-      <div className="currency-item__name">{nameI18N}</div>
+      <div data-testid="currencyName" className="currency-item__name">
+        {nameI18N}
+      </div>
       <div className="currency-item__rates">
-        <div>{`Buy: ${roundNum(exchangeRate.buy)} ${currency}`}</div>
-        <div>{`Mid: ${roundNum(exchangeRate.middle)} ${currency}`}</div>
-        <div>{`Sell: ${roundNum(exchangeRate.sell)} ${currency}`}</div>
+        <div data-testid="currencyBuy">{`Buy: ${roundNum(exchangeRate.buy)} ${currency}`}</div>
+        <div data-testid="currencyMid">{`Mid: ${roundNum(exchangeRate.middle)} ${currency}`}</div>
+        <div data-testid="currencySell">{`Sell: ${roundNum(exchangeRate.sell)} ${currency}`}</div>
       </div>
     </Paper>
   );
